@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Chapter 21-25 Assignment</title>
+</head>
+
+<body>
+    <script>
+        /* 3. Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser . 
+        var string = "Pakistani";
+        var n = string.indexOf("n");
+        document.write("String: " + string + "<br>");
+        document.write("Index of 'n': " + n); */
+
+        /* 4. Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser. 
+
+        var string = "Hello World";
+        var l = string.lastIndexOf("l");
+        document.write("String: " + string + "<br>");
+        document.write("Last index of 'l': " + l); */
+
+        /* 5. Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser. 
+
+        var string = "Pakistani";
+        var n = string.charAt(3);
+        document.write("String: " + string + "<br>");
+        document.write("Character at index 3: " + n); */
+
+        /* 6. Repeat Q1 using string concat() method. 
+
+        var firstName = prompt("Enter your first name.");
+        var lastName = prompt("Enter your last name.");
+        var fullName = firstName.concat(" " + lastName);
+        alert("Hello " + fullName); */
+
+        /* 7. Write a program to replace the “Hyder” to “Islam” in the word “Hyderabad” and display the result in your browser. 
+
+        var city = "Hyderabad";
+        var firstChar = city.indexOf("Hyderabad");
+        if (firstChar !== -1) {
+            newCity = city.slice(0, firstChar) + "Islam" + city.slice(firstChar + 5);
+        }
+        document.write("City: " + city + "<br>");
+        document.write("After replacement: " + newCity); */
+
+        /* 8. Write a program to replace all occurrences of “and” in the string with “&” and display the result in your browser. 
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        var newMessage = message.replace(/and/g, "&");
+        document.write(message + "<p>");
+        document.write(newMessage); */
+
+        /* 9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser. 
+
+        var string = "472";
+        var stringType = typeof(string);
+        var num = Number(string);
+        var numType = typeof(num);
+        document.write("Value: " + string + "<br>");
+        document.write("Type: " + stringType + "<br>");
+        document.write("Value: " + num + "<br>");
+        document.write("Type: " + numType); */
+
+        /* 10. Write a program that takes user input. Convert and show the input in capital letters. 
+
+        var userInput = prompt("Type your word");
+        var toUpperCase = userInput.toUpperCase();
+        document.write("User input: " + userInput + "<br>");
+        document.write("Upper case: " + toUpperCase); */
+
+        /* 11. Write a program that takes user input. Convert and show the input in title case. 
+
+        var userInput = prompt("Type your word");
+        var firstChar = userInput.slice(0, 1);
+        var otherChars = userInput.slice(1);
+        firstChar = firstChar.toUpperCase();
+        otherChars = otherChars.toLowerCase();
+        var cappedInput = firstChar + otherChars;
+        document.write("User input: " + userInput + "<br>");
+        document.write("Title case: " + cappedInput); */
+
+        /* 12. Write a program that converts the variable num to string.
+
+        var num = 35.36;
+        var string = num.toString();
+        var newString = string.split(".").join("");
+        document.write("Number: " + num + "<br>");
+        document.write("Result: " + newString); */
+
+        /* Write a program to take user input and store username in a variable. If the username contains any special symbol among [@ . , !], prompt the user to enter a valid username. 
+
+        var userName = prompt("Enter username");
+        for (var i = 0; i < userName.length; i++) {
+            if (userName.charAt(i) === "@" || userName.charAt(i) === "." || userName.charAt(i) === "," || userName.charAt(i) === "!") {
+                alert("Please enter a valid username");
+                break;
+            }
+        } */
+
+        /* 14. You have an array A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not. Note: Perform case insensitive search. Whether the user enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability. Example: */
+        
+    </script>
+</body>
+
+</html>

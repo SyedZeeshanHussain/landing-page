@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            background-color: lightseagreen;
+            width: 400px;
+            margin: 10px auto 0px auto;
+            padding: 10px;
+            letter-spacing: 2.5px;
+        }
+
+        .calculator {
+            background-color: rgb(184, 222, 235);
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type=text] {
+            font-size: 30px;
+            float: right;
+            margin-bottom: 10px;
+            clear: right;
+            width: 250px;
+            text-align: center;
+        }
+
+        input[type=text]:focus {
+            color: white;
+            background-color: lightsalmon;
+        }
+
+        input[type=button] {
+            margin: 5px auto 20px auto;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: lightseagreen;
+            color: white;
+            text-align: center;
+        }
+
+        input[type=button]:hover {
+            background-color: #0095ff;
+        }
+
+        input[type=reset] {
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            background-color: lightseagreen;
+            color: white;
+            width: 400px;
+        }
+
+        input[type=reset]:hover {
+            background-color: #0095ff;
+        }
+
+        .text {
+            float: left;
+            clear: right;
+            margin-left: 10px;
+        }
+
+        .buttons {
+            float: right;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>SIMPLE CALCULATOR</h2>
+    <div class="calculator">
+        <form>
+            <span class="text">Enter 1<sup>st</sup> Value : </span>
+            <input type="text" id="text1"><br>
+            <span class="text">Enter 2<sup>nd</sup> Value : </span>
+            <input type="text" id="text2">
+            <p>
+                <span class="buttons">
+                    <input type="button" value="Add" onClick="add()">
+                    <input type="button" value="Minus" onClick="subtract()">
+                    <input type="button" value="Multiply" onClick="multiply()">
+                    <input type="button" value="Divide" onClick="divide()">
+                    <input type="button" value="Modulus" onClick="modulus()">
+                    <span class="text">Result : </span>
+                    <input type="text" id="result">
+                    <input type="reset" value="Clear">
+        </form>
+    </div>
+    <script>
+        function add() {
+            var text1 = Number(document.getElementById("text1").value);
+            var text2 = Number(document.getElementById("text2").value);
+            var sum = text1 + text2;
+            document.getElementById("result").value = sum;
+        }
+        function subtract() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var sub = text1 - text2;
+            document.getElementById("result").value = sub;
+        }
+        function multiply() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var mul = text1 * text2;
+            document.getElementById("result").value = mul;
+        }
+        function divide() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var div = (text1 / text2).toFixed(4);
+            document.getElementById("result").value = div;
+        }
+        function modulus() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var mod = text1 % text2;
+            document.getElementById("result").value = mod;
+        }
+    </script>
+</body>
+
+</html>
